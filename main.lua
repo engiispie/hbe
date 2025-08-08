@@ -65,7 +65,7 @@ local emergencyTab = mainWindow:AddTab("Emergency")
 local emergencyGroupbox = emergencyTab:AddLeftGroupbox("Fixes")
 
 mainGroupbox:AddToggle("extenderToggled", { Text = "Toggle" }):OnChanged(updatePlayers)
-mainGroupbox:AddSlider("extenderSize", { Text = "Size", Min = 2, Max = 1000, Default = 10, Rounding = 1 }):OnChanged(updatePlayers)
+mainGroupbox:AddSlider("extenderSize", { Text = "Size", Min = 2, Max = 100, Default = 10, Rounding = 1 }):OnChanged(updatePlayers)
 mainGroupbox:AddSlider("extenderTransparency", { Text = "Transparency", Min = 0, Max = 1, Default = 0.5, Rounding = 2 }):OnChanged(updatePlayers)
 mainGroupbox:AddInput("customPartName", { Text = "Custom Part Name", Default = "HeadHB" }):OnChanged(updatePlayers)
 mainGroupbox:AddDropdown("extenderPartList", { Text = "Body Parts", AllowNull = true, Multi = true, Values = { "Custom Part", "Head", "HumanoidRootPart", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg" }, Default = "HumanoidRootPart" }):OnChanged(updatePlayers)
